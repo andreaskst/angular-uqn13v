@@ -9,6 +9,9 @@ import { Observable } from "rxjs";
 })
 export class AppComponent implements OnInit, OnDestroy {
   //https://brianflove.com/2016/12/11/anguar-2-unsubscribe-observables/
+  //https://medium.com/@luukgruijs/understanding-creating-and-subscribing-to-observables-in-angular-426dbf0b04a3
+
+  // However, there is a distinction between completing and unsubscribing. Completing is saying, no need to take any action with this emitted value, whereas unsubscribing says that I am finished and don't need any further emitted values.
   name = "Angular";
   counter: any;
   count: number;
