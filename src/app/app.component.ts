@@ -31,17 +31,17 @@ export class AppComponent implements OnInit, OnDestroy {
       }, 1000);
 
       // teardown
-      // return () => {
-      //   console.log("Teardown");
-      //   clearInterval(interval);
-      // };
-
-      return {
-        unsubscribe() {
-          clearTimeout(this.timeoutId);
-          console.log(observer);
-        }
+      return () => {
+        console.log("Teardown");
+        clearInterval(interval);
       };
+
+      // return {
+      //   unsubscribe() {
+      //     clearTimeout(this.timeoutId);
+      //     console.log(observer);
+      //   }
+      // };
     });
   }
 
