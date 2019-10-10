@@ -33,6 +33,7 @@ export class AppComponent implements OnInit, OnDestroy {
       // teardown
       return () => {
         console.log("Teardown");
+        
         clearInterval(interval);
       };
 
