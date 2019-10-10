@@ -30,8 +30,7 @@ export class AppComponent {
               clearInterval(interval);
             }
     
-    }
-    
+    });   
   }
 
   callObservable() {
